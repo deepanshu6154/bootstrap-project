@@ -1,0 +1,342 @@
+/* Colors */
+
+html{
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar{
+    width: 0.5rem;
+}
+::-webkit-scrollbar-track{
+    background: var(--white-color);
+}
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+}
+
+/* ********* Custom CSS ************* */
+
+
+h1{
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: var(--secondary-color);
+}
+
+h2{
+    font-weight: 700;
+    font-size: 2.25rem;
+    text-transform:capitalize;
+    font-family: var(--secondary-color);
+    line-height: 3rem;
+}
+
+
+.navbar{
+    position: fixed;
+    width: 100vw;
+    z-index: 20000;
+    left: 0;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    
+}
+
+/* .navbar-toggler-icon{
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+} */
+
+.nav-item{
+    padding: 0.5rem;
+    transition: all 200ms linear;
+}
+
+.navbar-brand{
+    font-size: 4rem;
+    font-family: 'Pacifico', cursive;
+    /* background: url("./Images/food.svg"); */
+    animation: myfirst5s; 
+}
+@keyframes myfirst{ from{left: 0px;} 
+to{right: 1000px;} 
+}
+
+:root a{
+    color: var(--bs-red)
+}
+
+:root a:hover{
+    color: var(--bs-blue);
+    /* font-size: 14px; */
+}
+
+/* *******************  Section-1 *************** */
+:root .main-btn{
+    display:inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--bs-red);
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8%;
+    border: 1px solid red;
+    color: var(--bs-white);
+    -webkit-transition: all .4s ease-out 0s;
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
+    box-shadow: rgba(223, 8, 8, 0.87) 0px 20px 25px -5px, rgba(236, 7, 7, 0.04) 0px 10px 10px -5px;
+    /* animation-name: rotate;
+    animation-duration: 4s;
+    animation-iteration-count: 2; */
+}
+.main-btn:hover{
+    transform: rotateY(180deg) translateZ(100px);
+}
+
+
+:root .white-btn{
+    display:inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--bs-white);
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8%;
+    border: 2px solid white;
+    color: var(--bs-black);
+    -webkit-transition: all .4s ease-out 0s;
+    box-shadow: rgba(235, 213, 213, 0.87) 0px 20px 25px -5px, rgba(236, 7, 7, 0.04) 0px 10px 10px -5px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+
+.fa-angle-right{
+    opacity: 0;
+}
+.white-btn:hover{
+    padding-right: 30px;
+    font-size: 1.2rem;
+}
+.white-btn:hover .fa-angle-right{
+    margin-right: 25px;
+    opacity: 1;
+}
+
+p{
+    font-style:inherit;
+    word-spacing: 0.5rem;
+    font-weight: 500;
+    
+}
+.home-section{
+    background: url("./Images/bg/bg-1.jpg") no-repeat center;
+    background-size: cover;
+    padding: 14rem 0 9rem;
+    margin-bottom: 1rem;
+}
+
+
+
+/* **************** Section-2  About ****************** */
+
+.about-section{
+    background: var(--gray-color);
+}
+.card{
+    padding-top: 2rem;
+    border-radius: 50%;
+}
+.card img{
+    border-radius: 2%;
+}
+
+.text-section{
+    padding-left: 2rem;
+}
+
+.food-type{
+    padding-top: 3rem;
+}
+
+.food-variety ul li{
+    font-size:1.1rem;
+    color: var(--text-color);
+    line-height: 30px;
+    position: relative;
+    margin-left: 30px;
+}
+
+:root .food-variety ul li::before{
+    position: absolute;
+    color: var(--bs-red);
+    font-size: 1.25rem;
+    content: '\f00c';
+    left: -2rem;
+    font-family: "Font Awesome 5 Free";
+    display: inline-block;
+    padding-right: 10px;
+    font-weight: 1000;
+}
+
+/* ************************** Story Section *************** */
+.story-section{
+    width: 100vw;
+    height: 27rem;
+    background: url("./Images/bg/bg-2.jpg") no-repeat center;
+    background-size: cover;
+    padding-top: 110px;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.main2-btn{
+    display:inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--bs-red);
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8%;
+    border: 1px solid red;
+    color: var(--bs-white);
+    -webkit-transition: all .4s ease-out 0s;
+    /* opacity: 0.8; */
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
+    /* box-shadow: rgba(223, 8, 8, 0.87) 0px 20px 25px -5px, rgba(236, 7, 7, 0.04) 0px 10px 10px -5px; */
+}
+
+.main2-btn:hover{
+    opacity: 1;
+    color:black;
+    background-color: white;
+    border: 2px solid black;
+}
+.story-section h2{
+    color: orangered;
+}
+
+
+
+/* ************************** Explore Section **************************** */
+
+.explore-section{
+    margin-top: 3rem;
+}
+.explore-section .card{
+    border: none;
+    background-color: transparent;
+}
+
+.explore-section .card img{
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+:root .explore-section .card span{
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding-bottom: 1.2rem;
+    color: var(--bs-red);
+    border-bottom: 0.04rem solid #eee;
+}
+
+.explore-section .card span del{
+    color: darkgrey;
+}
+
+
+
+
+/* ***********************  Reviews Section ****************************** */
+
+:root .reviews-section{
+    background-color: var(--bs-red);
+    padding-top: 2.3rem;
+    margin-top: 2rem;
+}
+
+.reviews-section .carousel-item{
+    margin-top: 3rem;
+    padding: 10rem 3rem;
+    /* background-color: var(--bs-white); */
+    border-radius: 1rem;
+    text-align: center;
+
+}
+
+.reviews-section .carousel-item .carousel-caption p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding: 0 11% 0.5rem;
+}
+
+.reviews-section .carousel-caption img{
+    max-width: 5rem;
+    border-radius: 50%;
+    padding: 0.3rem;
+}
+:root .reviews-section h2{
+    color: var(--bs-white);
+}
+
+.reviews-section .carousel-indicators button{
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    margin-right: 1rem;
+    opacity: 0.2;
+}
+
+.reviews-section .carousel-indicators button.active{
+    opacity: 1;
+}
+
+
+/* ********************* Contact Section ********************* */
+
+#contact .card:hover i,#contact .card:hover h4{
+	color: #87d37c;
+}
+
+
+:root .contact-section{
+    margin-top: 2rem;
+    background-color: var(--bs-gray);
+}
+
+.contact-section h3{
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+
+}
+
+
+
+/* ****************  Footer ***************************** */
+
+.footer-section{
+    background: var(--bs-red);
+}
+
+:root .footer-link{
+    font-size: 1rem;
+    color: var(--bs-white);
+    padding: 0 1rem;
+    text-decoration: none;
+}
+
+:root .footer-section .footer-social-media a:hover{
+    color: var(--bs-white);
+}
+
+:root .footer-section .footer-social-media a i{
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    color: var(--bs-white);
+}
