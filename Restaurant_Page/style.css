@@ -1,5 +1,10 @@
-/* Colors */
 
+/* ********* Custom CSS ************* */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -7,33 +12,34 @@ html{
 ::-webkit-scrollbar{
     width: 0.5rem;
 }
-::-webkit-scrollbar-track{
-    background: var(--white-color);
-}
-::-webkit-scrollbar-thumb{
-    background: var(--primary-color);
-}
-
-/* ********* Custom CSS ************* */
-
 
 h1{
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 2.5rem;
-    color: var(--secondary-color);
+    
 }
 
 h2{
-    font-weight: 700;
+    font-weight: 600;
     font-size: 2.25rem;
     text-transform:capitalize;
-    font-family: var(--secondary-color);
     line-height: 3rem;
 }
 
+h5{
+    text-transform:capitalize;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
 
-.navbar{
+p{
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+/* ************************* Section-1 Navbar ********************** */
+.navigation-wrap{
     position: fixed;
     width: 100vw;
     z-index: 20000;
@@ -43,19 +49,8 @@ h2{
     
 }
 
-/* .navbar-toggler-icon{
-    display: inline-block;
-    width: 1.5em;
-    height: 1.5em;
-    vertical-align: middle;
-    content: "";
-    background: no-repeat center center;
-    background-size: 100% 100%;
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-} */
-
 .nav-item{
-    padding: 0.5rem;
+    padding: 0 0.5rem;
     transition: all 200ms linear;
 }
 
@@ -65,9 +60,6 @@ h2{
     /* background: url("./Images/food.svg"); */
     animation: myfirst5s; 
 }
-@keyframes myfirst{ from{left: 0px;} 
-to{right: 1000px;} 
-}
 
 :root a{
     color: var(--bs-red)
@@ -75,7 +67,6 @@ to{right: 1000px;}
 
 :root a:hover{
     color: var(--bs-blue);
-    /* font-size: 14px; */
 }
 
 /* *******************  Section-1 *************** */
@@ -89,11 +80,7 @@ to{right: 1000px;}
     border: 1px solid red;
     color: var(--bs-white);
     -webkit-transition: all .4s ease-out 0s;
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
     box-shadow: rgba(223, 8, 8, 0.87) 0px 20px 25px -5px, rgba(236, 7, 7, 0.04) 0px 10px 10px -5px;
-    /* animation-name: rotate;
-    animation-duration: 4s;
-    animation-iteration-count: 2; */
 }
 .main-btn:hover{
     transform: rotateY(180deg) translateZ(100px);
@@ -111,7 +98,7 @@ to{right: 1000px;}
     color: var(--bs-black);
     -webkit-transition: all .4s ease-out 0s;
     box-shadow: rgba(235, 213, 213, 0.87) 0px 20px 25px -5px, rgba(236, 7, 7, 0.04) 0px 10px 10px -5px;
-    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+    
 }
 
 
@@ -146,6 +133,8 @@ p{
 
 .about-section{
     background: var(--gray-color);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
 .card{
     padding-top: 2rem;
@@ -159,7 +148,7 @@ p{
     padding-left: 2rem;
 }
 
-.food-type{
+.food-variety{
     padding-top: 3rem;
 }
 
@@ -193,27 +182,7 @@ p{
     text-align: center;
     margin-bottom: 3rem;
 }
-.main2-btn{
-    display:inline-block;
-    padding: 0.5rem 1.5rem;
-    background-color: var(--bs-red);
-    font-size: 1rem;
-    font-weight: 700;
-    border-radius: 8%;
-    border: 1px solid red;
-    color: var(--bs-white);
-    -webkit-transition: all .4s ease-out 0s;
-    /* opacity: 0.8; */
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px; */
-    /* box-shadow: rgba(223, 8, 8, 0.87) 0px 20px 25px -5px, rgba(236, 7, 7, 0.04) 0px 10px 10px -5px; */
-}
 
-.main2-btn:hover{
-    opacity: 1;
-    color:black;
-    background-color: white;
-    border: 2px solid black;
-}
 .story-section h2{
     color: orangered;
 }
@@ -249,7 +218,24 @@ p{
 }
 
 
+.main2-btn{
+    display:inline-block;
+    padding: 0.5rem 1.5rem;
+    background-color: var(--bs-red);
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 8%;
+    border: 1px solid red;
+    color: var(--bs-white);
+    -webkit-transition: all .4s ease-out 0s;
+}
 
+.main2-btn:hover{
+    opacity: 1;
+    color:black;
+    background-color: white;
+    border: 2px solid black;
+}
 
 /* ***********************  Reviews Section ****************************** */
 
