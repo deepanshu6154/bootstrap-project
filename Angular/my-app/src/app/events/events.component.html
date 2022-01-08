@@ -1,0 +1,17 @@
+<button (click)="getName('Deepanshu',25)">Click</button>
+<br><br>
+<input #box type="text" (keydown)="getData(box.value)" placeholder="keydown Event">
+<br>
+<input #box1 type="text" (keyup)="getData(box1.value)" placeholder="keyup Event">
+<br>
+<input #box2 type="text" (blur)="getData(box2.value)" placeholder="blur event">
+<br>
+<h1 (mouseover)="getData('Over')">MouseOver Event</h1>
+<br>
+<h1 (mouseleave)="getData('Leave')">MouseLeave Event</h1>
+<br>
+<br>
+<br>
+<input #box3 type="text" (keydown)="getData(box3.value)" placeholder="Type">
+<button (click)="getValue(box3.value)">Click</button>
+<h2>Box3 value is : {{inputData}}</h2>

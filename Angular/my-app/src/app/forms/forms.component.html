@@ -1,0 +1,111 @@
+
+
+<!-- <form #basicForm="ngForm" (ngSubmit)="getData(basicForm.value)">
+    <input ngModel type="text" name="user" placeholder="Enter Name">
+    <br><br>
+    <input ngModel type="text" name="email" placeholder="Enter email">
+    <br><br>
+    <input ngModel type="text" name="password" placeholder="Enter password">
+    <br><br>
+    <button>Submit</button>
+</form>
+
+<ol>
+    <li>{{userData.user}}</li>
+    <li>{{userData.email}}</li>
+    <li>{{userData.password}}</li>
+</ol> -->
+
+
+
+<!--  Bootstrap Example after adding into project -->
+
+<!-- <p>
+    <ngb-alert [dismissible]="false">
+      <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </ngb-alert>
+  </p>
+
+  <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+    <ngb-panel title="Simple">
+      <ng-template ngbPanelContent>
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+        labore sustainable VHS.
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel>
+      <ng-template ngbPanelTitle>
+        <span>&#9733; <b>Fancy</b> title &#9733;</span>
+      </ng-template>
+      <ng-template ngbPanelContent>
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+        labore sustainable VHS.
+      </ng-template>
+    </ngb-panel>
+    <ngb-panel title="Disabled" [disabled]="true">
+      <ng-template ngbPanelContent>
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+        aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+        craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+        occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+        labore sustainable VHS.
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion> -->
+
+
+
+<!-- Forms Validation -->
+
+  <!-- <form #loginForm="ngForm" (ngSubmit)="getData(loginForm.value)">
+    <input ngModel type="email" required #name="ngModel" pattern="[a-zA-Z]+$" name="name" placeholder="Enter Name">
+    <br>
+    <span *ngIf="name.invalid && name.touched">Please enter a valid input</span>
+    <br>
+    <input ngModel required #password="ngModel" type="password" minlength="2" name="password" placeholder="Enter password">
+    <br>
+    <span *ngIf="password.invalid && name.touched">Please enter a valid input</span>
+    <br>
+    
+    <button [disabled]="loginForm.invalid">Login</button>
+    <br>
+</form> -->
+
+
+
+
+
+<!--  Reactive Forms -->
+
+<!-- <form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <input type="text" name="user" formControlName="user" placeholder="Enter username">
+  <br>
+  <input type="text" name="password" formControlName="password" placeholder="Enter password">
+  <br>
+  <button>Login</button>
+</form> -->
+
+
+
+<!--  Reactive Validation Forms -->
+
+<form [formGroup]="loginForm" (ngSubmit)="loginUser()">
+  <input type="text" name="user" formControlName="user" placeholder="Enter username">
+  <br>
+  <span *ngIf="user && user.invalid && user.touched">Please Enter</span>
+  <br>
+  <input type="text" name="password" formControlName="password" placeholder="Enter password">
+  <br>
+  <span *ngIf="password && password.invalid && password.touched">Please Enter</span>
+  <br>
+  <button [disabled]="loginForm.invalid">Login</button>
+</form>

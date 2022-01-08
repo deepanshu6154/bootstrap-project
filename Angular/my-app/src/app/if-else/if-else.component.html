@@ -1,0 +1,42 @@
+
+<!-- Only if else (2 conditions) -->
+<div *ngIf="show; then ifBlock else elseBlock"></div>
+<ng-template #ifBlock>
+    <h1>Content to render when condition is true.
+    </h1>
+</ng-template>
+<ng-template #elseBlock><h1> Content to render when condition is false.</h1></ng-template>
+
+<div *ngIf="show; then ifBlock1 else elseBlock1"></div>
+<ng-template #ifBlock1><h1>I am going outside for having dinner tonight</h1></ng-template>
+<ng-template #elseBlock1><h1>I am going to have lunch at my home only.</h1></ng-template>
+
+
+
+
+
+
+<!-- More than one condition -->
+
+<ng-template [ngIf]="color==='red'">
+    <h1 style="color:red;">Red Color</h1>
+</ng-template>
+<ng-template [ngIf]="color==='blue'">
+    <h1 style="color: blue;">Blue Color</h1>
+</ng-template>
+<ng-template [ngIf]="color==='yellow'"> 
+    <h1 style="color: yellow;">Color Yellow</h1>
+</ng-template>
+
+
+
+
+<!-- Switch Case (when there is more number of conditions) -->
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'" style="color: red;">I am the Red Color</div>
+    <div *ngSwitchCase="'green'" style="color: green;">I am the Green Color</div>
+    <div *ngSwitchCase="'blue'" style="color: blue;">I am the Blue Color</div>
+    <div *ngSwitchCase="'yellow'" style="color: yellow;">I am the Yellow Color</div>
+    <div *ngSwitchDefault style="color: magenta;">Unknown Color</div>
+
+</div>

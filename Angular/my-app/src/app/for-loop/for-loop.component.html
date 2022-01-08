@@ -1,0 +1,17 @@
+<!-- Simple for loop -->
+
+<h1 *ngFor="let item of object">I am {{item.name}} and my email id is : {{item.email}}</h1>
+
+
+<!-- Nested For loop -->
+
+<ul *ngFor="let user of users">
+    <li>Name: {{user.name}}</li>
+    <li>PhoneNo. : {{user.phone}}</li>
+    <li>Social Accounts
+        <ul *ngFor="let account of user.social">
+            <li>{{account}}</li>
+        </ul>
+    </li>
+    
+</ul>

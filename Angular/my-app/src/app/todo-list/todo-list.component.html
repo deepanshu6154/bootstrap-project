@@ -1,0 +1,18 @@
+
+<div class="container">
+    <input type="text" placeholder="Enter" #inputContainer>
+    <div class="btn-group btn-group-toggle" (click)="addTask(inputContainer.value)">
+        <label class="btn-primary blue-button" ngbButtonLabel>Add</label>
+    </div>
+</div>
+
+<div *ngFor="let item of list">
+    <div>
+        <div class="task">{{item.name}} 
+            <div class="btn-group btn-group-toggle" >
+                <label class="btn-danger red-button" ngbButtonLabel (click)="removeTask(item.id)">Delete</label>
+            </div>
+        </div>
+        
+    </div>
+</div>
